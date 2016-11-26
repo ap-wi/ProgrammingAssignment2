@@ -2,6 +2,7 @@
 ### ==========================================
 
 ### Source
+### ======
 
 ##	Source / URL
 
@@ -34,6 +35,7 @@
 	
 	
 ### Rawdata
+### =======
 
 ##	Attribute Information:
 
@@ -651,6 +653,7 @@
 
 
 ### Transformations
+### ===============
 
    The reading of the data sets, the transformation of the data, prepearing of the tidy data 
    frame and writing in the csv-file "average_measurements_as_mean_deviation.txt" is implemented 
@@ -658,44 +661,39 @@
 
 ## R-script "run_analysis ( arg_dir )"	
 
-   - merges the training and the test sets to create one data set
-   - extracts only the measurements on the mean and standard deviation for each measurement
-   - Uses descriptive activity names to name the activities in the data set
-   - write csv-file "measurements_on_mean_deviation.csv" data frame with the measurements 
-     on the mean and standard deviation for each measurement
-   - appropriately labels the data set with descriptive variable names
-   - from the data set in step 4, creates a second, independent tidy data set 
-     with the average of each variable for each activity and each subject
-   - sort tidy data set by activity and volunteers (subject)
-   - write csv-file "average_measurements_on_mean_std.txt" with tidy data set
+- merges the training and the test sets to create one data set
+- extracts only the measurements on the mean and standard deviation for each measurement
+- Uses descriptive activity names to name the activities in the data set
+- write csv-file "measurements_on_mean_deviation.csv" data frame with the measurements 
+  on the mean and standard deviation for each measurement
+- appropriately labels the data set with descriptive variable names
+- from the data set in step 4, creates a second, independent tidy data set 
+  with the average of each variable for each activity and each subject
+- sort tidy data set by activity and volunteers (subject)
+- write csv-file "average_measurements_on_mean_std.txt" with tidy data set
 
-   The R-script "run_analysis()" use the folling R-scripts. 
+
+The R-script "run_analysis()" use the following R-scripts: 
    
-## Merges the training and the test sets to create one data set
-
+- Merges the training and the test sets to create one data set
 	R-script "merge_test_and_train_data( dir )"	
-
 	
-## Extracts only the measurements on the mean and standard deviation for each measurement
-
+- Extracts only the measurements on the mean and standard deviation for each measurement
 	R-script "select_columns_mean_std( my_data )"	
-	
-	
-## Uses descriptive activity names to name the activities in the data set	
-	
+		
+- Uses descriptive activity names to name the activities in the data set	
 	R-script "merge_activity_and_dfdata( dir , dfdata )"	
 	
+- Appropriately labels the data set with descriptive variable names
 
-## Appropriately labels the data set with descriptive variable names
-
-## From the data set in step 4, creates a second, independent tidy data set with 
-   the average of each variable for each activity and each subject. 
-	
+- From the data set in step 4, creates a second, independent tidy data set with 
+  the average of each variable for each activity and each subject. 	
      	R-script "create_tidy_df_of_average( dir , dfdata )"
 
 
-
+     	
 ### Tidy data
+### =========
 
 ## 	dataset
 	data frame:     my_mean_std_tidy
